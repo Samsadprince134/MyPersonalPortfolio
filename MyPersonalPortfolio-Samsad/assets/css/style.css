@@ -17,6 +17,60 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
+
+  --hue-color: 230;
+
+--first-color: hsl(var(--hue-color), 69%, 61%);
+--first-color-second: hsl(var(--hue-color), 69%, 61%);
+--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+
+--title-color: hsl(var(--hue-color), 8%, 15%);
+--text-color: hsl(var(--hue-color), 8%, 45%);
+--text-color-light: hsl(var(--hue-color), 8%, 65%);
+
+--input-color: hsl(var(--hue-color), 70%, 96%);
+--body-color: hsl(var(--hue-color), 60%, 99%);
+--container-color: #fff;
+
+--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+
+
+/* ============ COLOR PALETTE — Blue → Violet AI/Tech Theme ============ */
+--hue-color: 235; /* Blue-violet base hue for a modern AI/tech aesthetic */
+
+/* Primary accent — buttons, links, icons, highlights, active states */
+--first-color: hsl(var(--hue-color), 65%, 58%); /* #4E5ADA */
+
+/* Secondary accent — for subtle variation, gradients, secondary icons */
+--first-color-second: hsl(245, 60%, 60%); /* #665CD6 */
+
+/* Darker shade — hover states on buttons/links */
+--first-color-alt: hsl(var(--hue-color), 65%, 48%); /* #2B38CA */
+
+/* Light tint — badges, subtle highlights, soft section backgrounds */
+--first-color-lighter: hsl(var(--hue-color), 85%, 94%); /* #E3E5FD */
+
+/* Text colors — dark, professional, high readability */
+--title-color: hsl(var(--hue-color), 20%, 14%); /* #1D1E2B */
+--text-color: hsl(var(--hue-color), 10%, 40%); /* #5C5E70 */
+--text-color-light: hsl(var(--hue-color), 8%, 60%); /* #9192A1 */
+
+/* Backgrounds — clean, very light, barely-tinted whites */
+--input-color: hsl(var(--hue-color), 40%, 97%); /* #F4F5FA */
+--body-color: hsl(230, 45%, 98%); /* #F8F8FC */
+--container-color: #fff; /* Pure white cards/containers */
+
+/* Scrollbar — subtle, unobtrusive */
+--scroll-bar-color: hsl(var(--hue-color), 15%, 92%); /* #E8E8EE */
+--scroll-thumb-color: hsl(var(--hue-color), 15%, 80%); /* #C4C6D4 */
+
+
+
+
+
   --body-font: "Poppins", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px */
