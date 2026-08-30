@@ -176,42 +176,94 @@ function scrollUpfunc() {
 window.addEventListener("scroll", scrollUpfunc);
 
 // DARK/LIGHT THEME
+// const themeButton = document.getElementById("theme-button");
+// const darkTheme = "dark-theme";
+// const iconTheme = "uil-sun";
+
+// //Previously selected topic (if user selected)
+// const selectedTheme = localStorage.getItem("selected-theme");
+// const selectedIcon = localStorage.getItem("selected-icon");
+
+// // obtain the current theme
+// const getCurrentTheme = () =>
+//   document.body.classList.contains(darkTheme) ? "dark" : "light";
+// const getCurrentIcon = () =>
+//   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+
+// if (selectedTheme) {
+//   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+//     darkTheme
+//   );
+//   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+//     iconTheme
+//   );
+// }
+
+
+
+//ActivateDeactivate the theme manually with the button
+// themeButton.addEventListener("click", () => {
+//   // Add or remove the dark icon/theme
+//   document.body.classList.toggle(darkTheme);
+//   themeButton.classList.toggle(iconTheme);
+//   // We save the theme and the current icon that the user chose
+//   localStorage.setItem("selected-theme", getCurrentTheme());
+//   localStorage.setItem("selected-icon", getCurrentIcon());
+// });
+
+
+
+// DARK/LIGHT THEME
+
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
 
-//Previously selected topic (if user selected)
+// Previously selected theme (if user selected one)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// obtain the current theme
+// Get current theme
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
+
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 
-if (selectedTheme) {
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme
-  );
+// DEFAULT THEME: DARK MODE
+if (!selectedTheme) {
+  document.body.classList.add(darkTheme);
+  themeButton.classList.add(iconTheme);
+} else {
+  // Apply previously selected theme
+  document.body.classList[
+    selectedTheme === "dark" ? "add" : "remove"
+  ](darkTheme);
+
+  // Apply previously selected icon
+  themeButton.classList[
+    selectedIcon === "uil-moon" ? "add" : "remove"
+  ](iconTheme);
 }
 
-//ActivateDeactivate the theme manually with the button
+// Activate/deactivate theme manually
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark icon/theme
+  // Toggle dark theme
   document.body.classList.toggle(darkTheme);
+
+  // Toggle icon
   themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
+
+  // Save user's preference
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+
+
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-  strings: ["a Web", "a MERN ", "a Full Stack"],
+  strings: ["An AI Engineer", "a Full Stack Developer"],
   smartBackspace: true,
   startDelay: 1000,
   typeSpeed: 130,
@@ -219,7 +271,6 @@ var typed = new Typed(".type", {
   backSpeed: 60,
   loop: true,
 });
-
 
 
 /* Premium Scroll Reveal Logic */
