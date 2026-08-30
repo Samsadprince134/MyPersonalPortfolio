@@ -219,3 +219,15 @@ var typed = new Typed(".type", {
   backSpeed: 60,
   loop: true,
 });
+
+
+
+/* Premium Scroll Reveal Logic */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("reveal-active");
+  });
+}, { threshold: 0.1 }); // 0.1 means it triggers when 10% of the section is visible
+
+// Select your main sections and tell the observer to watch them
+document.querySelectorAll(".section, .home_container, .footer").forEach((el) => observer.observe(el));
