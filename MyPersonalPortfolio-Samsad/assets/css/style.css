@@ -3,73 +3,28 @@
 :root {
   --header-height: 3rem;
 
-  --hue-color: 200;
-  --first-color: hsl(var(--hue-color), 69%, 61%); /* #6e57e0 */
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%); /* #7d6bd6 */
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%); /* #c2b6fc */
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  /* ============ COLOR PALETTE — Blue → Violet AI/Tech Theme ============ */
+  --hue-color: 235; /* Blue-violet base hue for a modern AI/tech aesthetic */
 
+  /* Primary accent — buttons, links, icons, highlights, active states */
+  --first-color: hsl(var(--hue-color), 65%, 58%); /* #4E5ADA */
+  --first-color-second: hsl(245, 60%, 60%); /* #665CD6 */
+  --first-color-alt: hsl(var(--hue-color), 65%, 48%); /* #2B38CA */
+  --first-color-lighter: hsl(var(--hue-color), 85%, 94%); /* #E3E5FD */
 
-  --hue-color: 230;
+  /* Text colors — dark, professional, high readability */
+  --title-color: hsl(var(--hue-color), 20%, 14%); /* #1D1E2B */
+  --text-color: hsl(var(--hue-color), 10%, 40%); /* #5C5E70 */
+  --text-color-light: hsl(var(--hue-color), 8%, 60%); /* #9192A1 */
 
---first-color: hsl(var(--hue-color), 69%, 61%);
---first-color-second: hsl(var(--hue-color), 69%, 61%);
---first-color-alt: hsl(var(--hue-color), 57%, 53%);
---first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  /* Backgrounds — clean, very light, barely-tinted whites */
+  --input-color: hsl(var(--hue-color), 40%, 97%); /* #F4F5FA */
+  --body-color: hsl(230, 45%, 98%); /* #F8F8FC */
+  --container-color: #fff; /* Pure white cards/containers */
 
---title-color: hsl(var(--hue-color), 8%, 15%);
---text-color: hsl(var(--hue-color), 8%, 45%);
---text-color-light: hsl(var(--hue-color), 8%, 65%);
-
---input-color: hsl(var(--hue-color), 70%, 96%);
---body-color: hsl(var(--hue-color), 60%, 99%);
---container-color: #fff;
-
---scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
---scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-
-
-
-/* ============ COLOR PALETTE — Blue → Violet AI/Tech Theme ============ */
---hue-color: 235; /* Blue-violet base hue for a modern AI/tech aesthetic */
-
-/* Primary accent — buttons, links, icons, highlights, active states */
---first-color: hsl(var(--hue-color), 65%, 58%); /* #4E5ADA */
-
-/* Secondary accent — for subtle variation, gradients, secondary icons */
---first-color-second: hsl(245, 60%, 60%); /* #665CD6 */
-
-/* Darker shade — hover states on buttons/links */
---first-color-alt: hsl(var(--hue-color), 65%, 48%); /* #2B38CA */
-
-/* Light tint — badges, subtle highlights, soft section backgrounds */
---first-color-lighter: hsl(var(--hue-color), 85%, 94%); /* #E3E5FD */
-
-/* Text colors — dark, professional, high readability */
---title-color: hsl(var(--hue-color), 20%, 14%); /* #1D1E2B */
---text-color: hsl(var(--hue-color), 10%, 40%); /* #5C5E70 */
---text-color-light: hsl(var(--hue-color), 8%, 60%); /* #9192A1 */
-
-/* Backgrounds — clean, very light, barely-tinted whites */
---input-color: hsl(var(--hue-color), 40%, 97%); /* #F4F5FA */
---body-color: hsl(230, 45%, 98%); /* #F8F8FC */
---container-color: #fff; /* Pure white cards/containers */
-
-/* Scrollbar — subtle, unobtrusive */
---scroll-bar-color: hsl(var(--hue-color), 15%, 92%); /* #E8E8EE */
---scroll-thumb-color: hsl(var(--hue-color), 15%, 80%); /* #C4C6D4 */
-
-
-
-
+  /* Scrollbar — subtle, unobtrusive */
+  --scroll-bar-color: hsl(var(--hue-color), 15%, 92%); /* #E8E8EE */
+  --scroll-thumb-color: hsl(var(--hue-color), 15%, 80%); /* #C4C6D4 */
 
   --body-font: "Poppins", sans-serif;
 
@@ -162,7 +117,6 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
- 
   color: var(--text-color);
 }
 
@@ -191,7 +145,7 @@ button {
   border-style: none;
   cursor: pointer;
 }
-.name{
+.name {
   display: flex;
   align-items: center; 
   gap: 5px;
@@ -222,7 +176,6 @@ button {
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
-  
 }
 
 .grid {
@@ -233,10 +186,8 @@ button {
 .header {
   width: 100%;
   position: fixed;
- 
   z-index: var(--z-fixed);
   background-color: var(--body-color);
- 
 }
 
 /* NAVBAR */
@@ -248,7 +199,6 @@ button {
   align-items: center;
   border-color: #ff4500;
   border-width: 100px 100px 100px 100px;
-  
 }
 
 .nav_logo,
@@ -518,7 +468,6 @@ button {
 .skills_titles {
   display: flex;
   justify-content: space-between;
-  /* margin-bottom: var(--mb-0-5); */
 }
 
 .skills_name {
@@ -856,7 +805,95 @@ button {
   background-color: var(--text-color-light);
 }
 
-/* MEDIA QUERIES */
+/* ============================================================ */
+/* ============ PREMIUM SCROLL REVEAL ANIMATIONS ============== */
+/* ============================================================ */
+
+/* 1. Base Hidden State for Sections */
+.section,
+.home_container,
+.footer {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Active state (triggered via IntersectionObserver) */
+.section.reveal-active,
+.home_container.reveal-active,
+.footer.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. Staggered Elements - Group 1 (Primary / Left items) */
+.home_social,
+.home_blob,
+.about_img,
+.skills_header,
+.qualification_data:nth-child(odd),
+.portfolio_img,
+.contact_info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+  transition-delay: 0.1s;
+  will-change: opacity, transform;
+}
+
+/* 3. Staggered Elements - Group 2 (Secondary / Right items) */
+.home_data,
+.about_description,
+.qualification_data:nth-child(even),
+.portfolio_title,
+.portfolio_description,
+.portfolio_button,
+.contact_content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.25, 1, 0.3, 1);
+  transition-delay: 0.25s;
+  will-change: opacity, transform;
+}
+
+/* Trigger staggered element reveals when parent is active */
+.reveal-active .home_social,
+.reveal-active .home_blob,
+.reveal-active .about_img,
+.reveal-active .skills_header,
+.reveal-active .qualification_data:nth-child(odd),
+.reveal-active .portfolio_img,
+.reveal-active .contact_info,
+.reveal-active .home_data,
+.reveal-active .about_description,
+.reveal-active .qualification_data:nth-child(even),
+.reveal-active .portfolio_title,
+.reveal-active .portfolio_description,
+.reveal-active .portfolio_button,
+.reveal-active .contact_content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect users who prefer reduced motion (Accessibility best practice) */
+@media (prefers-reduced-motion: reduce) {
+  .section, .home_container, .footer, 
+  .home_social, .home_blob, .about_img, .skills_header, .qualification_data, .portfolio_img, .contact_info,
+  .home_data, .about_description, .portfolio_title, .portfolio_description, .portfolio_button, .contact_content {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================================ */
+/* ======================= MEDIA QUERIES ====================== */
+/* ============================================================ */
+
 /* For small devices */
 @media screen and (max-width: 350px) {
   .container {
